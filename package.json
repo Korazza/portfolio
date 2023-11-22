@@ -1,5 +1,5 @@
 {
-  "name": "korazza.com",
+  "name": "@korazza/portfolio",
   "version": "0.0.0",
   "scripts": {
     "format": "prettier --write --cache '**/*.([tj]s?(x)|md?(x)|astro)'"
