@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Korazza">
+	<div class="stack">
+		<section class="cluster | p-md radius-3 shadow-3" id="personal-info">
+			<div class="cluster">
+				<div class="frame | w-15 radius-1 shadow-1">
+					<img src="/me.png" alt="Korazza's logo" />
+				</div>
+				<div class="stack">
+					<div class="stack" data-space="xs">
+						<span class="heading-3">Roberto Coratti (Korazza)</span>
+						<span class="text-base-500">A passionate developer from Italy</span>
+					</div>
+					<p style="max-width: 24rem;">
+						I am a freelance and full-stack developer based in Rome with a
+						passion for building digital services and experiences. I am
+						currently studying computer science at the <a
+							class="text-primary-300"
+							href="https://web.uniroma2.it/"
+							target="_blank">University of Rome Tor Vergata</a
+						> with no developer work experience.
+					</p>
+				</div>
+			</div>
+		</section>
+	</div>
+</Layout>
+
+<style lang="scss">
+	@use "@korazza/ui/src/scss/abstracts/functions" as *;
+
+	#personal-info {
+		$bg: color("base", "900", false);
+		background: hsla(hue($bg), saturation($bg), lightness($bg), 0.25);
+		backdrop-filter: blur(20px);
+		position: relative;
+		animation: fadeIn 1000ms linear;
+	}
+</style>

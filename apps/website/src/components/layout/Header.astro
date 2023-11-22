@@ -1,0 +1,28 @@
+---
+export interface Links {
+	label: string
+	href: string
+}
+
+export interface Props {
+	links: Links[]
+}
+
+const { links } = Astro.props
+---
+
+<header class="site-header">
+	<div class="site-header__inner">
+		<nav class="navigation">
+			<ul>
+				{
+					links.map(({ label, href }) => (
+						<li>
+							<a {href}>{label}</a>
+						</li>
+					))
+				}
+			</ul>
+		</nav>
+	</div>
+</header>

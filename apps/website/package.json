@@ -1,0 +1,25 @@
+{
+	"name": "@korazza/website",
+	"type": "module",
+	"version": "0.0.0",
+	"scripts": {
+		"dev": "astro dev --host",
+		"start": "astro dev --host",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"lint": "eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\""
+	},
+	"dependencies": {
+		"@korazza/ui": "workspace:^",
+		"astro": "^3.3.0",
+		"astro-icon": "^0.8.1",
+		"sass": "^1.69.4"
+	},
+	"devDependencies": {
+		"@typescript-eslint/parser": "^6.7.5",
+		"eslint": "^8.51.0",
+		"eslint-plugin-astro": "^0.29.1",
+		"eslint-plugin-prettier": "^5.0.1"
+	}
+}

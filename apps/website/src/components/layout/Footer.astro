@@ -1,0 +1,30 @@
+---
+import Icon from "astro-icon"
+
+export interface Contact {
+	icon: string
+	href: string
+}
+
+export interface Props {
+	contacts: Contact[]
+}
+
+const { contacts } = Astro.props
+---
+
+<footer class="site-footer | py-sm">
+	<nav class="navigation">
+		<ul class="cluster | justify-content-center" data-space="lg">
+			{
+				contacts.map(({ icon, href }) => (
+					<li>
+						<a {href} target="_blank">
+							<Icon name={icon} class="w-6" />
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</nav>
+</footer>
