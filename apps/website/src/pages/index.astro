@@ -14,7 +14,7 @@ import Layout from "../layouts/Layout.astro"
 						<span class="heading-3">Roberto Coratti (Korazza)</span>
 						<span class="text-base-500">A passionate developer from Italy</span>
 					</div>
-					<p style="max-width: 24rem;">
+					<p id="personal-info__content">
 						I am a freelance and full-stack developer based in Rome with a
 						passion for building digital services and experiences. I am
 						currently studying computer science at the <a
@@ -33,10 +33,16 @@ import Layout from "../layouts/Layout.astro"
 	@use "@korazza/ui/src/scss/abstracts/functions" as *;
 
 	#personal-info {
+		place-self: center;
+		max-width: fit-content;
 		$bg: color("base", "900", false);
 		background: hsla(hue($bg), saturation($bg), lightness($bg), 0.25);
 		backdrop-filter: blur(20px);
 		position: relative;
 		animation: fadeIn 1000ms linear;
+
+		&__content {
+			max-width: 24rem;
+		}
 	}
 </style>

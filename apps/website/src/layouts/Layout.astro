@@ -1,5 +1,4 @@
 ---
-import Header from "../components/layout/Header.astro"
 import Footer from "../components/layout/Footer.astro"
 
 interface Props {
@@ -34,7 +33,8 @@ const { title } = Astro.props
 				},
 			]}
 		/> -->
-		<main class="md:order-0 -order-1 mx-auto max-w-[60rem]">
+		<header></header>
+		<main>
 			<slot />
 		</main>
 		<Footer
@@ -68,7 +68,7 @@ const { title } = Astro.props
 	</body>
 </html>
 
-<style lang="scss">
+<style lang="scss" is:global>
 	@use "@korazza/ui/src/scss/main";
 
 	.cover {
